@@ -1,2 +1,4 @@
-x = input("Number of Students: ")
-y = input("Number of Apples: ")
+N = int(input("Number of Students: "))
+K = int(input("Number of Apples: "))
+print (K // N)
+print (K % N)

@@ -1,0 +1,6 @@
+x = int(input("Enter Number: "))
+y = str(x + 1)
+z = str(x - 1)
+x = str(x)
+print("The next number for the number " + x + " is " + y + ".")
+print("The previous number for the number " + x + " is " + z + ".")
