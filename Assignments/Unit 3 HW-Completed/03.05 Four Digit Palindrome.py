@@ -9,3 +9,5 @@ if [one,ten,hun,thou] == [thou,hun,ten,one]:
 
 else:
     print("NO")
+
+#teacher 

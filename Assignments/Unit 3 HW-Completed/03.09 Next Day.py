@@ -24,6 +24,7 @@ elif mon == 11 or mon == 4 or mon == 6 or mon == 9:
         nday = day + 1
         nmon = mon
 else:
+    #only for feb, the only month with 28 days
     if day == 28:
         nday = 1
         nmon = 3
