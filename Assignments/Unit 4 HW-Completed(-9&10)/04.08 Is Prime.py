@@ -5,3 +5,4 @@ for i in range(2, x):
         print("PRIME")
     else:
         print("COMPOSITE")
+                                                   
