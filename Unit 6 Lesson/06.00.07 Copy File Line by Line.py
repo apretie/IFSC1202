@@ -1,6 +1,6 @@
 # The name of the file can be a string
-inputfilename = "06.00.00 DemoText.txt"
-outputfilename = "06.00.07 NewDemoText.txt"
+inputfilename = "Unit 6 Lesson/06.00.00 DemoText.txt"
+outputfilename = "Unit 6 Lesson/06.00.07 NewDemoText.txt"
 recordcount = 0
 # Open the input file for reading
 inputfile = open(inputfilename, 'r')

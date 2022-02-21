@@ -1,7 +1,7 @@
 # Open the file for writing
-newfile = open("06.00.00 OutputText.txt", "w")
+newfile = open("Unit 6 Lesson/06.00.00 OutputText.txt", "w")
 # Output 10 numbers
-for i in range(1,11):
+for i in range(1,11 + 1):
 # Note output does not contain a linefeed character,
 # so we will have to add a linefeed when we write it it.
 	output = "The number is " + str(i)
