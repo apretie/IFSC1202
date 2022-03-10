@@ -1,16 +1,23 @@
 from math import pi
-radiusfile = open("Assignments/Unit 6 HW/Text Files/06.01 Radius.txt", "r")
-x = radiusfile.read()
-radius = x
-#print(x)
+
 def diameter(x):
-    radius = x * 2
-    return radius
-def circum(x):
-    c = radius * pi * 2
+    d = x * 2
+    return d
+def circumference(x):
+    c = 2 * pi * x
     return c
 def area(x):
-    a = pi * radius ** 2
+    a = pi * x ** 2
     return a
-print("Radius Diameter Circumference Area") #need to use sep{}
-print(radius, c, a)
+
+radiusfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.01 Radius.txt", "r")     
+x = float(radiusfile.readline())
+print("{0:>15}{1:>15}{2:>15}{3:>15}".format("Radius","Diameter","Circumference","Area"))
+while x != "":
+    print("{0:15.5f}{1:15.5f}{2:15.5f}{3:15.5f}".format(x,diameter(x),circumference(x),area(x)))
+    x = radiusfile.readline()
+    if x != "":
+        x = float(x)
+
+radiusfile.close()
+
