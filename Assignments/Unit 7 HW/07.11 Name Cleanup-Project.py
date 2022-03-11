@@ -2,7 +2,6 @@ nametxt = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/", "r")
 nametxt = nametxt.readline()
 name = nametxt.strip(" ")
 
-
 def ProperCase(s):
     x = s.lower()
     x = x[1].upper()
