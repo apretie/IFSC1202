@@ -1,4 +1,3 @@
-
 def isEven(e):
     if int(e % 2 == 0):
         return True
@@ -10,10 +9,14 @@ def isOdd(o):
     else:
         return False
 def isPrime(p):
-        if int(p % 2 != 0) and int(p % 3 != 0) and int(p % 5 != 0) and int(p % 7 != 0) and int(p % 11 != 0) or (p == 2) or (p == 3) or (p == 5) or (p == 7) or (p == 11):
-            return True
-        else:
+    half = (p // 2) + 1
+    for i in range(2, half):
+        # If the number is divisible by any number
+        # other than 1 and self then it is not prime
+        if p % i == 0:
             return False
+
+    return True
 
 
 numfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.06 Numbers.txt", "r")
