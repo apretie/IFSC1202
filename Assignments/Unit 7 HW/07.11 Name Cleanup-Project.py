@@ -4,9 +4,9 @@ name = nametxt.strip(" ")
 
 
 def ProperCase(s):
-    s. lower()
-
-    return s.upper
+    x = s.lower()
+    x = x[1].upper()
+    return x
 #Returns a properly cases string s by uppercasing the first character and lowercasing the rest of the string.
 # Hint: use upper() and lower() methods
 def RemoveNewLine(s):
