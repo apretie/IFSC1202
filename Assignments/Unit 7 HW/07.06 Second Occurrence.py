@@ -1,4 +1,4 @@
-prompt ("Enter a String: ")
+x  = str(input("Enter a string: "))
 # determine if string contains an f
 # if the letter "f" is in the second location print index
 #If the string contains the letter "f" only once, then print "One f".

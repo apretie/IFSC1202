@@ -9,25 +9,35 @@ def ProperCase(s):
 #Returns a properly cases string s by uppercasing the first character and lowercasing the rest of the string.
 # Hint: use upper() and lower() methods
 def RemoveNewLine(s):
+    r = s.replace()
+    return r
 #Returns a string with the NewLine Character ("\n") removed from string s
 #Hint: use replace() method
 def Trim(s):
-    return s.strip()
+    return s.strip(" ")
 #Returns a string with the leading and trailing spaces removed from string s
 #Hint: use strip() method
 def FirstName(s):
+    f = 
+    return f
 #Returns the first name of string s
 #Hint:
 # Find the first space in string s using the find() method
 # Create a substring from the beginning of string s up to the first space
 # Call the ProperCase() function
 def LastName(s):
+    l = 
+    return l
 #Returns the last name of string s
 #Hint:
 # Find the last space in string s using the rfind() method
 # Create a substring from the last space to the ending of sring s
 # Call the ProperCase() function
 def MiddleName(s):
+    m = 
+    return m
+
+nametxt.close()
 #Returns the middlename from string s
 # Hint:
 # Find the first space in string s using the find() method

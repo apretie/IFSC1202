@@ -1,3 +1,4 @@
+x  = str(input("Enter a string: "))
 #Prompt for a string that contains the letter "h" at least two times
 # In the string, remove the first and last occurance of the letter "h" as well as all the characters between them, 
 # then print the result.
