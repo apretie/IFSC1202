@@ -22,9 +22,9 @@ def isPrime(p):
 numfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.06 Numbers.txt", "r")
 num = numfile.readline()
 
-enumfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.06 Evennumbers.txt", "w")
-onumfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.06 Oddnumbers.txt", "w")
-pnumfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.06 Primenumbers.txt", "w")
+enumfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW-Completed/Text Files/06.06 Evennumbers.txt", "w")
+onumfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW-Completed/Text Files/06.06 Oddnumbers.txt", "w")
+pnumfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW-Completed/Text Files/06.06 Primenumbers.txt", "w")
 
 ncount = 0
 ecount = 0

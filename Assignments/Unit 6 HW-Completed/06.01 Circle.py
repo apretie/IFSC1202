@@ -10,7 +10,7 @@ def area(x):
     a = pi * x ** 2
     return a
 
-radiusfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.01 Radius.txt", "r")     
+radiusfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW-Completed/Text Files/06.01 Radius.txt", "r")     
 x = float(radiusfile.readline())
 print("{0:>15}{1:>15}{2:>15}{3:>15}".format("Radius","Diameter","Circumference","Area"))
 while x != "":

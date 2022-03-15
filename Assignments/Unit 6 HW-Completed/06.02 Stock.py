@@ -5,7 +5,7 @@ def percentchange(x,b):
     return p
 
 #stockfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.02 Stock.txt", "r")
-stockfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.02 Stock.txt", "r")
+stockfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW-Completed/Text Files/06.02 Stock.txt", "r")
 x = float(stockfile.readline())
 b = x
 print("{0:^10}{1:^10}".format("Price","Change"))

@@ -49,8 +49,9 @@ def MiddleName(s):
     if len(middlen) == 1:
         middlename += "."  
     return middlen
+openfile = open("/workspace/IFSC1202/Assignments/Unit 7 HW/07.11 Names.txt","r")
+nametxt = openfile.readlines()
 
-nametxt.close()
 
 #Returns the middlename from string s
 # Hint:
@@ -64,13 +65,11 @@ nametxt.close()
 print("{:<10} {:<10} {:<10}".format("First","Middle","Last"))
 print("{0:-<10} {0:-<10} {0:-<10}".format("-"))
 
-openfile = open("/workspace/IFSC1202/Assignments/Unit 7 HW/07.11 Names.txt","r")
-file = openfile.readlines()
 
 #while f != "":
-for f in file:
+for f in nametxt:
     f = Trim(f)
     f = RemoveNewLine(f)
     print("{0:<10} {1:<10} {2:<10}".format(FirstName(f),MiddleName(f),LastName(f)))
 
-openfile.close()
+nametxt.close()

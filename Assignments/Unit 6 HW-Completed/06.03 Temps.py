@@ -3,10 +3,10 @@ def FahrToCel(f):
     return c
 
 
-ftempsfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.03 FTemps.txt", "r")
+ftempsfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW-Completed/Text Files/06.03 FTemps.txt", "r")
 f = ftempsfile.readline()
 
-ctempsfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW/Text Files/06.03 CTemps.txt", "w")
+ctempsfile = open("/workspace/IFSC1202/Assignments/Unit 6 HW-Completed/Text Files/06.03 CTemps.txt", "w")
 i = 0
 while f != "":
     ctempsfile.write("{:.1f}\n".format(FahrToCel(f)))
