@@ -1,5 +1,4 @@
 email = str(input("Enter a string: "))
-
 nat = email.replace("@","")
 print(nat)
 #Prompt for a string.

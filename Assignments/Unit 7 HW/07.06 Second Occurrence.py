@@ -7,7 +7,7 @@ if num > 1:
 elif num == 1:
     print("One f")
 else:
-    print("Zero f")n 
+    print("Zero f")
 # determine if string contains an f
 # if the letter "f" is in the second location print index
 #If the string contains the letter "f" only once, then print "One f".
