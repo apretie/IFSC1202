@@ -50,7 +50,6 @@ while num != "":
     ncount += 1
     num = numfile.readline()
 
-
 numfile.close()
 enumfile.close()
 onumfile.close()

@@ -9,6 +9,7 @@
 
 #You may mix positive and negative indexes in the same slice: 
     #for example, s[1:-1] is exactly the same substring (the slice begins with the character with index 1 and ends with an index of -1, not including it).
+
 s = 'Hello'
 print(s[1:4])
 print(s[-4:-1])
