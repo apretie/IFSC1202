@@ -1,5 +1,8 @@
-"Enter Values Separated by Spaces: "
-#Prompt for a string containing integers separated by spaces.
+value = input(string("Enter Values Separated by Spaces: "))
+for i in range(value):
+    if i
+    return odd
+print(odd)
 #Load the values into a list.
 #Print the values that are odd.
 #Do not use the list or string functions or methods for this assignment (except the .split() method).

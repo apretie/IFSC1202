@@ -1,7 +1,7 @@
-#Create a python program that performs unit conversions. You code should do the following:
-#Prompt for a floating point number (FromValue). Your prompt should display "Enter From Value: "
-#Prompt for the unit to convert from (FromUnit). Your prompt should display "Enter From Unit (mm, cm, m, km, in, yd, mi):"
-#Prompt for the unit to convert to (ToUnit). Your prompt should display "Enter To Unit (mm, cm, m, km, in, yd, mi):"
+FromValue = input(float("Enter From Value: "))
+FromUnit = input(float("Enter From Unit (mm, cm, m, km, in, yd, mi):"))
+ToUnit = input(float("Enter To Unit (mm, cm, m, km, in, yd, mi): "))
+
 #Open the file 9.4 Conversion.txt file and read it into a 2 dimensional list.
 #The first row contains the names of the valid ToUnits.
 #The first column contains the names of the valid FromUnits.

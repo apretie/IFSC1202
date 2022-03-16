@@ -14,7 +14,43 @@
         #(10 points) Maximum Population Change and Year
     #Do not use the list or string functions or methods for this assignment.
     #Do not use the for x in y iterator; use for x in range(n)
-#Example: Year    Population    Change    Percent Change
+openfile = open("/workspace/IFSC1202/Text Files/08.11 USPopulation.txt","r")
+
+
+while x != []:
+    uspop = openfile.readline()
+    p = int(x) *1000
+    p.append(x)
+
+
+change = 
+perchange = {15.2f}
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("{:<10} {:<10} {:<10}".format("Population","Change","Percent Change"))
+
+
+
+
+
+
+
+
+
+    
+#Example: 
+# ear    Population    Change    Percent Change
 #1950    151868000     N/A       N/A
 #1951    153982000     2114000   1.39%
 #1952    156393000     2411000   1.57%
