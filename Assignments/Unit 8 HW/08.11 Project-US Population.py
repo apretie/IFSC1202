@@ -15,27 +15,31 @@
     #Do not use the list or string functions or methods for this assignment.
     #Do not use the for x in y iterator; use for x in range(n)
 openfile = open("/workspace/IFSC1202/Text Files/08.11 USPopulation.txt","r")
-values = input(str("Enter Values Separated by Spaces: "))
-vlist = value.split()
-for i in range(len(vlist)):
-    vlist[i] = int(vlist[i])
+x = openfile.readline()
 
-while x != []:
-    uspop = openfile.readline()
-    p = int(x) *1000
-    p.append(x)
+
+cyear = 1950
+ppop = 0
+
+
+
+while x != "":
+    a.append(year)
+    pop = (int(x)*1000)
+    
+    if pop - ppop == pop:
+        change = "N/A"
+        pchange = "N/A"
+    else:
+        change = 
+    a.append(change)
+    a.append(pchange)
+
+
 
 
 change = 
 perchange = {15.2f}
-
-
-
-
-
-
-
-
 
 
 
