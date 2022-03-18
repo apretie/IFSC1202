@@ -13,4 +13,4 @@ value = input("Enter Values Separated by Spaces: ")
 
 for i in range(value):
     pos == 
-    neg ==
+    neg == 

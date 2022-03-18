@@ -3,8 +3,8 @@
 #Swap the minimum and maximum elements in the list.
 #Do not use the list or string functions or methods for this assignment (except the .split() method).
 #Do not use the for x in y iterator; use for x in range(n)
-value = input(string("Enter Values Separated by Spaces: "))
-svalue = 0
+value = input(str("Enter Values Separated by Spaces: "))
+svalue = [0]
 for i in range(value):
     svalue = 
 

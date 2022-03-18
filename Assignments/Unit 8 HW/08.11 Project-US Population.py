@@ -50,7 +50,7 @@ print("{:<10} {:<10} {:<10}".format("Population","Change","Percent Change"))
 
     
 #Example: 
-# ear    Population    Change    Percent Change
+#Year    Population    Change    Percent Change
 #1950    151868000     N/A       N/A
 #1951    153982000     2114000   1.39%
 #1952    156393000     2411000   1.57%

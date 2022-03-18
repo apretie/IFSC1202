@@ -12,3 +12,12 @@ print(odd)
 #3
 #9
 #11
+
+#for i in range(len(vlist)):
+    #vlist[i] = int(vlist[i])
+    value = input(str("Enter Values Separated by Spaces: "))
+vlist = value.split()
+
+for i in range(1,(len(vlist)), 2):
+    #if i % 2 != " ":
+    print(vlist[i])
