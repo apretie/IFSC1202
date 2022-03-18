@@ -18,9 +18,7 @@ for i in range(len(vlist)):
     elif vlist[i] > 0 and vlist[i+1] > 0:
         pos = str(vlist[i]) + " " + str(vlist[i+1])
         print(pos)
-        exit()
     elif vlist[i] < 0 and vlist[i+1] < 0:
         neg = str(vlist[i]) + " " + str(vlist[i+1])
         print(neg)
-        exit()
 
