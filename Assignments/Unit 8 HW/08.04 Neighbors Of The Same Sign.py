@@ -9,7 +9,8 @@
 #2 3
 #-1 -2
 
-value = input(string("Enter Values Separated by Spaces: "))
+value = input("Enter Values Separated by Spaces: ")
+
 for i in range(value):
-    pos ==
+    pos == 
     neg ==
