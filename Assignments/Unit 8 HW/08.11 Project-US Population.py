@@ -15,7 +15,10 @@
     #Do not use the list or string functions or methods for this assignment.
     #Do not use the for x in y iterator; use for x in range(n)
 openfile = open("/workspace/IFSC1202/Text Files/08.11 USPopulation.txt","r")
-
+values = input(str("Enter Values Separated by Spaces: "))
+vlist = value.split()
+for i in range(len(vlist)):
+    vlist[i] = int(vlist[i])
 
 while x != []:
     uspop = openfile.readline()

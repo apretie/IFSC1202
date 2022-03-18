@@ -25,3 +25,7 @@ print("Swapped Minimum and Maximum: {}".format())
 #HW Output:
 #Enter Values Separated by Spaces: 3 4 5 2 1
 #Swapped Minimum and Maximum: 3 4 1 2 5
+values = input(str("Enter Values Separated by Spaces: "))
+vlist = value.split()
+for i in range(len(vlist)):
+    vlist[i] = int(vlist[i])

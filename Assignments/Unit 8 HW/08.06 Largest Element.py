@@ -1,6 +1,7 @@
 value = input(string("Enter Values Separated by Spaces: "))
-for i in range(value):
-
+vlist = value.split()
+for i in range(len(vlist)):
+    vlist[i] = int(vlist[i])
 
 #Load the values into a list.
 #Determine the element in the list with the largest value.

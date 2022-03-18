@@ -8,9 +8,19 @@
 #Enter Values Separated by Spaces: -1 2 3 -1 -2
 #2 3
 #-1 -2
+value = input(str("Enter Values Separated by Spaces: "))
+vlist = value.split()
+for i in range(len(vlist)):
+    vlist[i] = int(vlist[i])
+for i in range(len(vlist)):
+    if (i + 1) == (len(vlist)):
+        exit()
+    elif vlist[i] > 0 and vlist[i+1] > 0:
+        pos = str(vlist[i]) + " " + str(vlist[i+1])
+        print(pos)
+        exit()
+    elif vlist[i] < 0 and vlist[i+1] < 0:
+        neg = str(vlist[i]) + " " + str(vlist[i+1])
+        print(neg)
+        exit()
 
-value = input("Enter Values Separated by Spaces: ")
-
-for i in range(value):
-    pos == 
-    neg == 
