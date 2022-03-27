@@ -7,7 +7,7 @@
 #Prompt for the column numbers in the list to swap by calling swap_columns(a, i, j)
 #Print the list with the swapped columns by calling print_list(a)
 
-
+stockfile = open("/workspace/IFSC1202/Text Files/09.02 NumbersList.txt", "r")
 
 
 
