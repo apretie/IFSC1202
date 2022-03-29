@@ -20,7 +20,7 @@ for i in range(len(a)):
     # Loop though each element in the list
     for j in range(len(a[i])):
         # Find the max
-        max(j) then find maybe? idk"
+        max(j) #then find maybe? idk"
 
 print("The maximum value {} occured in row {} column {}".format(max,m,n))
 
