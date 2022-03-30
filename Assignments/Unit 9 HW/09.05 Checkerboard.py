@@ -1,25 +1,32 @@
-#Create a python program the creates a checkerboard pattern as shown.
-#You should prompt for the size of the board (minus the frame).
-#Create the checkerboard within a 2D array and print it out. Your solution should work for mulitple sizes.
-#Hints:
-    #Prompt to the size of the board (n)
-    #Create an empty 2D List
-    #Append the top of the board, consisting of an plus sign, n dashes, and a plus sign
-    #For n times, append interior rows, consisting of a vertical bar, n spaces, and a vertical bar
-    #Append the bottom of the board, consisting of an plus sign, n dashes, and a plus sign
-    #Loop through the interior rows and columns; set the element to an asterisk if the column and row index are even/odd or odd/event
-    #Loop through the entire board and and print the values.
+a = []
+n = int(input("Enter Size: "))
+for i in range(n+2):
+    a.append([' '] * (n+2))
 
+# corners
+a[0][0] = '+'
+a[0][-1] = '+'
+a[n+1][0] = '+'
+a[n+1][-1] = '+'
+for i in range(1,n+2):
+    # border lines
+    a[0][i] = '-'
+    a[i][0] = '|'
+    a[n+1][i] = '-'
+    a[i][n+1] = '|'
 
+# inside
+for i in range(1,n+1):
+    for j in range(1,n+1):
+        if (i % 2) == 0 and (j % 2) != 0:
+            a[i][j] = '*'
+            a[j][i] = '*'
 
-
-
-
-
-
-
-
-
+# print the picture 
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        print(a[i][j], end=' ') 
+    print()
 
 
 #HW Output: 

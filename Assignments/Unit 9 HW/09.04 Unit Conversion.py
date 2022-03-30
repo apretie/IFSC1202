@@ -1,23 +1,39 @@
-FromValue = input(float("Enter From Value: "))
-FromUnit = input(float("Enter From Unit (mm, cm, m, km, in, yd, mi):"))
-ToUnit = input(float("Enter To Unit (mm, cm, m, km, in, yd, mi): "))
+a = []
+FromValue = float(input("Enter From Value: "))
+FromUnit = input("Enter From Unit (mm, cm, m, km, in, yd, mi): ")
+ToUnit = input("Enter To Unit (mm, cm, m, km, in, yd, mi): ")
+row = 0
+col = 0
 
-#Open the file 9.4 Conversion.txt file and read it into a 2 dimensional list.
-#The first row contains the names of the valid ToUnits.
-#The first column contains the names of the valid FromUnits.
-#Using a FOR loop, seach for a match between the entered FromUnit and the first column. Save the index of the row that you find the match.
-#If no match was found for the FromUnit, then print "FromUnit is not valid" and exit the program
-#Using a FOR loop, seach for a match between the entered ToUnit and the first row. Save the index of the column that you find the match.
-#If no match was found for the ToUnit, then print "ToUnit is not valid" and exit the program
-#Using the index, get the multiplier from the 2D list, multiply it by the FromValue, round to 7 digits, and displays the result as shown.
+# Open the file and read the first line 
+convfile = open("/workspace/IFSC1202/Text Files/09.04 Conversion.txt", 'r') 
+conv = convfile.readline() 
 
+while conv != "":
+    y = conv.split(" ") 
+    a.append(y)
+    conv = convfile.readline()
+convfile.close()
 
+for i in range(1,len(a)):
+    for j in range(1,len(a[i])):
+        if a[i][0] == FromUnit:
+            row = i
+if row == 0:
+    print("FromUnit is not valid")
+    exit()
+for i in range(1,len(a)):
+    for j in range(1,len(a[i])):
+        if a[0][j] == ToUnit:
+            col = j
+if col == 0:
+    print("ToUnit is not valid")
+    exit()
 
+ToValue = (FromValue * float(a[row][col]))
+ToValue = round(ToValue,7)
 
-
-
-
-
+print("{} {} => {} {}".format(FromValue,FromUnit,ToValue,ToUnit))
 
 
 
