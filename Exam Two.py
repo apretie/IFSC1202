@@ -13,8 +13,8 @@ while something != "":
     girlname =[:]
     boyname = [:]
     
-    for i in range(len(girlname)):
-        
+    for i in range((len(girlname)):
+        rank = girlname + 1
         girlname.append()
     for i in range(len(boyname)):
         boyname.append()
