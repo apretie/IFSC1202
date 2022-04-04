@@ -7,31 +7,31 @@ while nametxt != "":
     names = nametxt.split(",")
     for i in range(len(names)):
         names[i] = str(names[i]).strip(" ")
+        names[i] = str(names[i]).strip("\n")
     a.append(names)
     nametxt = namefile.readline()
 namefile.close()
-#print(a[0][0]) 
+
 fnandr = str(input("Enter a Name: ")) #find name and rank
 fnandr = fnandr.strip(" ")
 fnandr = fnandr.title()
 if fnandr == "Q":
     exit()
-j = 5
+found = 0
 for i in range(len(a)):
     rank += 1
     for j in range(len(a[i])):
-        #print(a[i][j])
-        #print("fnandr is {}".format(fnandr))
        if fnandr == a[i][j]:
             if j == 0:
                 print("Boy's Name - Rank: {}".format(rank))
+                found = 1
             elif j == 1:
                 print("Girl's Name - Rank: {}".format(rank))
-            #found = "yes"
-            #print("Boy's Name - Rank: {}".format(rank))
-if j == 5:
+                found = 1
+
+if found == 0:
     print("Name Not Found")
-        #fnandr != a[i][j]
+
 
             
 #
