@@ -8,10 +8,10 @@
 openfile
 readfile
 class Pet():
-  def __init__(self, type = "Dog", Age = 3):
-    self, pet = Name
-    self, type = Type
-    self, Age = 
+  def __init__(self, petname="Fido", type="Dog", age = 3):
+    self, petname = petname
+    self, type = type
+    self, age = age
 
 
 
@@ -19,8 +19,7 @@ class Pet():
 
 
 
-
-print("".format)
+print("{:<10} {:<10} {:<10}".format("Name","Type","Age"))
 
 #HW Output:
     #Name    Type     Age
