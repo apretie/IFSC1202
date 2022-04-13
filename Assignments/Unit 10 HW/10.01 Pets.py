@@ -13,8 +13,14 @@ class Pet():
     self, type = type
     self, age = age
 
+def Name(self):
+  a = []
+openfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.01 Pets.txt", 'r') 
+x = openfile.readline()
 
-
+while x != "":
+    y = x.split(",")
+    for i in range(len(y)):
 
 
 
