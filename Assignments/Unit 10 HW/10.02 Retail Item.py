@@ -10,19 +10,17 @@
 #Display a report that displays the Description, Units On Hand, Price, and Inventory Value
 
 class RetailItem ():
-     def __init__(self, Description, UnitsOnHand, Price):
-          self, Description = Description
-          self, UnitsOnHand = UnitsOnHand
-          self, Price = Price
-     def Description(self):
-          akdj
-     def UnitsOnHand():
-          akdlj
-     def Price ():
-          a;lkdj
-     
+     def __init__(self, Description="", UnitsOnHand=0, Price=0):
+          self.Description = Description
+          self.UnitsOnHand = UnitsOnHand
+          self.Price = Price
+     def InventoryValue(self):
+          return self.UnitsOnHand * self.Price()
+invenfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.02 Inventory.txt", 'r') 
+x = invenfile.readline() 
+y = x.split(",")
+item1 = RetailItem(y[0])
 
-a = []
 openfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.02 Inventory.txt", 'r') 
 x = openfile.readline()
 
@@ -30,8 +28,7 @@ while x != "":
     y = x.split(",")
     for i in range(len(y)):
 
-
-print("{:<10} {:<10} {:<10}".format("Description","Type","Age"))
+print("{:<10} {:<10} {:<10}".format("Description","Units On Hand","Price"))
 
 
 #HW Output:

@@ -40,8 +40,33 @@
 #Process each line of data in the 10.05 Points.txt file. As you read each line from Points.txt, you will create two Point objects. You can reuse these objects as you read the next datapoint.
 #The first two values are the (x,y) values for point A, and the second two values are the (x,y) values for point B.
 #Read each datapoint pair and disply the datapoint values, distancd, midpoint, and XAngle.
+from math import atan
+from math import pi
+from math import sqrt
+class Point:
+    def_init_(self, Xvalue, Yvalue):
+        self.x = Xvalue 
+        self.y = Yvalue
+    def ToString(self):
+        return"(" + str(self.x) + ", "+ str(self.y)+")"
+    def Distance(pointA, pointB):
+        return sqrt(PointB.x - PointA.x)**2 + str(self.y) +")"
+    def MidPoint(pointA, pointB):
+        x = (pointB.x + pointA.x) / 2
+        y = (pointB.y + pointA.y) / 2
+        midpoint = Point(x,y)
+        return midpoint
+    def XAngle(pointA, pointB):
+        slope = (pointB.y - pointA.y) / (pointB.x + pointA.x)
+        return atan(slope) * 180.0 /pi
 
+print("{:<20s} {:<20s} {:<20s} {:<20s}".format("Point A","Point B","Distance","Midpoint","Angle"))
+print("{:<20s} {:<20s} {:<20s} {:<20s}".format("-"*15,"-"*15,"-"*15,"-"*15,"-"*15))
 
+pointfile = open()
+point =  
+while pointline != "":
+    pointvalues = line.split(",")
 
 
 #HW Output:

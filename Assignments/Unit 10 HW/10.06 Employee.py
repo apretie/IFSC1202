@@ -9,12 +9,19 @@
 #Weekly pay is defined as 1 times the wage for hours 0-40, and 1.5 times wage for hours greater than 40
 #As you read each line from Payroll.txt, you will create one Employee object. You can reuse this object as you read the next employee.
 #Print the FirstName, LastName, IDNumber, HoursWorked, HourlyWage, and WeeklyPay for each employee
+class Employee:
+    def_init_(self,firstname,lastname,idnumber,hours,wage):
+        self.FirstName = firstname
+        self.LastName = lastname
+        self.IDNumber = idnumber
+        self.HourlyWage = hours
+        self.Wage = wage
+    def
 
 
 
 
-
-
+print("{:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format("First","Last","ID","Hours","Hourly","Weekly"))
 #HW Output:
 #First    Last      ID   Hours  Hourly  Weekly
     #Name    Name  Number  Worked    Wage     Pay

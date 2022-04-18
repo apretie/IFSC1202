@@ -8,24 +8,23 @@
 openfile
 readfile
 class Pet():
-  def __init__(self, petname="Fido", type="Dog", age = 3):
-    self, petname = petname
-    self, type = type
-    self, age = age
+  def __init__(self):
+    self.petname = ""
+    self.type = ""
+    self.age = ""
 
 def Name(self):
   a = []
-openfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.01 Pets.txt", 'r') 
-x = openfile.readline()
-
-while x != "":
-    y = x.split(",")
-    for i in range(len(y)):
+petfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.01 Pets.txt", 'r') 
+x = petfile.readline()
+y = x.split(",")
 
 
 
 
-print("{:<10} {:<10} {:<10}".format("Name","Type","Age"))
+
+print("{:<8s} {:<8s} {:<10}".format("Name","Type","Age"))
+
 
 #HW Output:
     #Name    Type     Age
