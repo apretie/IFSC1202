@@ -24,10 +24,13 @@
     #Jim Evans has 3 scores - the second score is missing
     #Joe Smith has 4 scores
     #Jane Doe has 2 scores - the first score is missing
-class Student():
-    def_init_(self, firstname, lastname, tnumber, scores):
-        self.First Name = firstname
-        self.Last
+class Student ():
+    def __init__(self, firstname, lastname, tnumber, scores):
+        self.FirstName = firstname
+        self.LastName = lastname
+        self.TNumber = tnumber
+        self.Scores = scores
+        
 
 
 

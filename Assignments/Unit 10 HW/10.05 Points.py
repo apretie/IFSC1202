@@ -44,7 +44,7 @@ from math import atan
 from math import pi
 from math import sqrt
 class Point:
-    def_init_(self, Xvalue, Yvalue):
+    def _init_(self, Xvalue, Yvalue):
         self.x = Xvalue 
         self.y = Yvalue
     def ToString(self):

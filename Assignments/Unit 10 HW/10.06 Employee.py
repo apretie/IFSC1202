@@ -10,13 +10,14 @@
 #As you read each line from Payroll.txt, you will create one Employee object. You can reuse this object as you read the next employee.
 #Print the FirstName, LastName, IDNumber, HoursWorked, HourlyWage, and WeeklyPay for each employee
 class Employee:
-    def_init_(self,firstname,lastname,idnumber,hours,wage):
+    def _init_(self,firstname,lastname,idnumber,hours,wage):
         self.FirstName = firstname
         self.LastName = lastname
         self.IDNumber = idnumber
         self.HourlyWage = hours
         self.Wage = wage
-    def
+    def WeeklyPay():
+        self.WeeklyPay = (self.)
 
 
 

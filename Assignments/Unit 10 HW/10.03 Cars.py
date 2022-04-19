@@ -13,8 +13,8 @@
 #If the number is less that zero. call the Brake method to subtract that amount of speed from the car.
 #Print the change of speed value and the current speed value
 
-class Car():
-    def_init_(self, Year, Make):
+class Car ():
+    def __init__(self, Year, Make):
         self.Year = year
         self.Make = make
         self.Speed = 0
