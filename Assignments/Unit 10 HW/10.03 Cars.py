@@ -15,12 +15,14 @@
 
 class Car ():
     def __init__(self, Year, Make):
-        self.Year = year
-        self.Make = make
+        self.Year = Year
+        self.Make = Make
         self.Speed = 0
+
     def Accelerate(self, amount):
         self.Speed += amount
         return
+
     def Brake(self, amount):
         self.Speed -+ amount
         if self.Speed < 0:
@@ -31,12 +33,18 @@ def changespeed(amount):
     if amount > 0:
         ()
     else:
-        myCar.Brake(abs(amount))
+        car.Brake(abs(amount))
     return
 
+carfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.03 Cars.txt", 'r')
+cars = carfile.readline()
+y = cars.split(",")
+car = Car(y[0], strip(), y[1].strip())
 
-
-
+print("Make: {}".format(car.Make))
+print("Year: {}".format(car.Year))
+print()
+print("Change Speed")
 
 #HW Output:
 #Make: Jeep

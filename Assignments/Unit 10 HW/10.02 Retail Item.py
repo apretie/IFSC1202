@@ -1,35 +1,27 @@
-#reate a class called RetailItem that holds data about an Item in a retail store.
-#The class should have the following attributes:
-#Description - description of the item (default "")
-#UnitsOnHand - the number of units in inventory (default 0)
-#Price - the item's retail price (default 0)
-#Create a constructor that accepts the Description, UnitOnHand, and Price, then sets them to attributes in the RetailItem Class.
-#If one of the attributes is not present, then set the attribute to the default value.
-#Create a method called InventoryValue, which returns the UnitsOnHand times Price.
-#Read the 10.02 Inventory.txt file and creates three objects, one for each item.
-#Display a report that displays the Description, Units On Hand, Price, and Inventory Value
 
 class RetailItem ():
-     def __init__(self, Description="", UnitsOnHand=0, Price=0):
-          self.Description = Description
-          self.UnitsOnHand = UnitsOnHand
-          self.Price = Price
+     def __init__(self, description="", unitsonhand=0, price=0):
+          self.Description = description
+          self.UnitsOnHand = unitsonhand
+          self.Price = price
      def InventoryValue(self):
-          return self.UnitsOnHand * self.Price()
-invenfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.02 Inventory.txt", 'r') 
-x = invenfile.readline() 
-y = x.split(",")
-item1 = RetailItem(y[0])
+          return self.UnitsOnHand * self.Price
 
 openfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.02 Inventory.txt", 'r') 
 x = openfile.readline()
 
+print("{:>11} {:>20} {:>20} {:>20}".format("Description","Units On Hand","Price","Inventory Value"))
+
+list = []
+
 while x != "":
     y = x.split(",")
-    for i in range(len(y)):
+    item = RetailItem(y[0],int(y[1].strip()),float(y[2].strip()))
+    print("{:>11} {:20} {:20.2f} {:20.2f}".format(item.Description,item.UnitsOnHand,item.Price,item.InventoryValue()))
+    list.append(item)
+    x = openfile.readline()
 
-print("{:<10} {:<10} {:<10}".format("Description","Units On Hand","Price"))
-
+openfile.close()
 
 #HW Output:
 #Description       Units On Hand               Price     Inventory Value
