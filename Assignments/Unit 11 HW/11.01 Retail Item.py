@@ -14,12 +14,12 @@ class RetailItem ():
 def find_inventory(mylist):
     print("{:>11} {:>20} {:>20} {:>20}".format("Description","Units On Hand","Price","Inventory Value"))
     for i in range(len(mylist)):
-
-        print(list[i].Description, list[i].UnitsOnHand, list[i].Price, list[i].InventoryValue)        
+        #r.find("Jacket") find jacket 
+        print(list[i].Description, list[i].UnitsOnHand, list[i].Price, "{}".formatlist[i].InventoryValue)        
 def print_inventory(mylist):
     print("{:>11} {:>20} {:>20} {:>20}".format("Description","Units On Hand","Price","Inventory Value"))
     for i in range(len(mylist)):
-        print(mylist[i].Description, mylist[i].UnitsOnHand, mylist[i].Price, mylist[i].InventoryValue)
+        print("{:>11} {:>20} {:>20} {:>20}".format(mylist[i].Description, mylist[i].UnitsOnHand, mylist[i].Price, mylist[i].InventoryValue()))
 #Read 11.01 Inventory.txt and create a list of inventory items
 
 openfile = open("/workspace/IFSC1202/Assignments/Unit 11 HW/11.01 Inventory.txt", 'r') 
