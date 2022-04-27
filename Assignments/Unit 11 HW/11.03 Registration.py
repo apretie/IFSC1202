@@ -1,85 +1,89 @@
-#Create the following objects, attributes, and methods:
-    #Student Class
-    #The Student Class contains information about a specific student
-        #Step 1 - Define the class object "Student"
-        #Step 2 - Define the initializer and any default values
-            #def init(self, firstname, lastname, tnumber):
-        #Step 3 - Define the object attributes for a student
-            #FirstName - First Name of student
-            #LastName - Last Name of Student
-            #TNumber - T-Number of Student
-            #CourseList - an empty list of course
-        #Step 4 - Define Actions (Methods) associated with the object
-            #None
-    #StudentList Class
-    #The StudentList Class contains a list of Student objects
-        #Step 1 - Define the class object "Studentlist"
-        #Step 2 - Define the initializer and any default values
-            #def init(self):
-        #Step 3 - Define the object attributes of the students
-            #Studentlist - an empty list of student objects
-        #Step 4 - Define Actions (Methods) associated with the object
-            #add_student - Add a student to the list - def add_student(self, firstname, lastname, tnumber):
-                #Create a new student object using the parameters
-                #Append new student object to Studentlist
-            #find_student - Find a student in the Studentlist list and return the index - def find_student(self, studenttofind):
-                #Loop though Studentlist
-                #if the T-Number matches the sttudenttofind, then return the index in Studentlist
+class Student ():
+    def __init__(self, firstname, lastname, tnumber):
+        self.FirstName = firstname
+        self.LastName = lastname
+        self.TNumber = tnumber
+        self.CourseList = []
+
+class StudentList ():
+    def __init__(self):
+        self.Studentlist = []
+    def add_student(self, firstname, lastname, tnumber):
+        person = Student(firstname, lastname, tnumber)
+        self.append(person)
+    def find_student(self, studenttofind):
+        for sindex in range(len(Studentlist)):
+            if self[sindex].TNumber == studenttofind:
+                return sindex
             #print_student_list - Prints the Student Registration data - def print_student_list(self):
                 #Prints headings
                 #Loops through each student and prints name and t-number
                     #For each students, loops through the courses in which the student has registered.
-            #add_student_from_file - Reads the student file and append the values to the student list - def add_student_from_file(self, filename):
-                #Opens and reads 11.03 Students.txt file
-                #Calls add_student with data to create a student object and add it to the student list
-    #Course Class
-    #The Course contains information about a specific courses
-        #Step 1 - Define the class object "Course"
-        #Step 2 - Define the initializer and any default values
-            #def init(self, department, number, name, room, meetingtimes):
-        #Step 3 - Define the object attributes for a student
-            #department - four character department abbreviation that is offering the course
-            #number - four digit course number
-            #name - long name for course
-            #room - building and room number where the course meets
-            #meetingtimes - day and times when the course meets
-        #Step 4 - Define Actions (Methods) associated with the object
-            #None
-    #CourseList Class
-    #The CourseList Class contains a list of Course objects
-        #Step 1 - Define the class object "Courselist"
-        #Step 2 - Define the initializer and any default values
-            #def init(self):
-        #Step 3 - Define the object attributes of the students
-    #Courselist - an empty list of course objects
-        #Step 4 - Define Actions (Methods) associated with the object
-            #add_course - Add a course to the list - def add_course(self, department, number, name, room, meetingtimes):
-                #Create a new couse object using the parameters
-                #Append new course object to Courselist
-            #find_course - Find a course in the Courselist list and return the index - def find_course(self, departmenttofind, numbertofind):
-                #Loop though Courselist
-                #if the department matches the departmenttofind and number matches numbertofind, then return the index in Courselist
-            #add_course_from_file - Reads the course file and appends the values to the course list - def add_course_from_file(self, filename):
-                #Opens and reads course file
-                #Calls add_course with data to create a course object and add it to the course list
-#Main Progam
-#Create an empty Courselist object
-#Read Course List File and append to course list object using add_course_from_file
-#Create an empty Studentlist oject
-#Read Student List File and append to student list object using add_student_from_file
-#Open and read the registration information in the Registration file
-#Based on the department and course number, find the index of the course in the course list using find_course
-#Create a new course object out the selected course object
-#Based on the TNumber, find the index of the student in the student list using find_student
-#Append the new course object to course list in the selected student course list using .append mystudentlist.Studentlist[studentindex].CourseList.append(mycourse)
-#Print the student registration using print_student_list
+    def print_student_list(self):
+        print("First Name     Last Name      T-Number       Course          Name                                             Room           Meeting Times")
+        for i in range(len(Studentlist)):
+            print("{:<15}{:<15}{:<15}".format(Studentlist[i].FirstName,Studentlist[i].LastName,Studentlist[i].TNumber))
+            for j in range(len(Studentlist[i].CourseList)): 
+                print("{}{:4} {:4}       {:49}{:15}{:15}".format(" "*45,Studentlist[i].CourseList[j].Department,Studentlist[i].CourseList[j].Number,Studentlist[i].CourseList[j].Name,Studentlist[i].CourseList[j].Room,Studentlist[i].CourseList[j].MeetingTimes))
+    def add_student_from_file(self, filename):
+        studentsfile = open(filename, 'r')
+        line = studentsfile.readline()
+        while line != "":
+            y = line.split(",")
+            StudentList.add_student(Studentlist, y[0].strip(), y[1].strip(), y[2].strip())
+            line = studentsfile.readline()
+        studentsfile.close()
 
-def Student ():
-    def _init_(self, firstname, lastname, tnumber):
-        self.
+class Course():
+    def __init__(self, department, number, name, room, meetingtimes):
+        self.Department = department
+        self.Number = number
+        self.Name = name
+        self.Room = room
+        self.MeetingTimes = meetingtimes
 
+class CourseList ():
+    def __init__(self):
+        self.Courselist = []
+    def add_course(self, department, number, name, room, meetingtimes):
+        classes = Course(department, number, name, room, meetingtimes)
+        self.append(classes)
+    def find_course(self, departmenttofind, numbertofind):
+        for cindex in range(len(Courselist)):
+            if self[cindex].Department == departmenttofind and self[cindex].Number == numbertofind:
+                return cindex
+    def add_course_from_file(self, filename):
+        coursesfile = open(filename, 'r')
+        line = coursesfile.readline()
+        while line != "":
+            z = line.split(",")
+            CourseList.add_course(Courselist, z[0].strip(), z[1].strip(), z[2].strip(), z[3].strip(), z[4].strip())
+            line = coursesfile.readline()
+        coursesfile.close()
+
+# Main
+Courselist = []
+CourseList.add_course_from_file(Courselist, "/workspace/IFSC1202/Assignments/Unit 11 HW/11.03 Courses.txt")
+Studentlist = []
+StudentList.add_student_from_file(Studentlist, "/workspace/IFSC1202/Assignments/Unit 11 HW/11.03 Students.txt")
 
 
+openfile = open("/workspace/IFSC1202/Assignments/Unit 11 HW/11.03 Registration.txt", 'r') 
+reg = openfile.readline()
+
+while reg != "":
+    x = reg.split(",")
+    cindex = CourseList.find_course(Courselist, x[1].strip(), x[2].strip())
+#     Create a new course object out the selected course object
+    mycourse = Courselist[cindex]
+    mystudentlist = []
+    sindex = StudentList.find_student(Studentlist, x[0])
+    #Append the new course object to course list in the selected student course list using .append mystudentlist.Studentlist[sindex].CourseList.append(mycourselist)
+    mystudentlist.append(Studentlist[sindex].CourseList.append(mycourse))
+    reg = openfile.readline()
+
+StudentList.print_student_list(mystudentlist)
+openfile.close()
 
 #Hw Output:
 #First Name    Last Name     T-Number      Course         Name                                              Room          Meeting Times

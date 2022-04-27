@@ -1,73 +1,42 @@
-#In the assignment, you will use the Cartesian Coordinate system, which uses the x and y axes. Each data point has an x value and a y value.
-#Use the following code to create a datapoint object:
-        # Step 1 - Define the class object "Point"
-            #class Point:
-        # Step 2 - Define the initializer and any default values
-            #def __init__(self, Xvalue, Yvalue):
-        # Step 3 - Define the object attributes
-            #self.x = Xvalue
-            #self.y = Yvalue
-        ## Step 4 - Define the methods for the object
-# ToString returns a nicely formated string to represent the data point
-            #def ToString(self):
-        #return "(" + str(self.x) + ", " + str(self.y) + ")"
-#Functions - Create the following functions to make calculations about datapoints
-#Distance - calculates the distance between two datapoints.
-#Parameters:
-#Point A - a Point object with values
-#Point B - a Point ojbect with values
-#Returns:
-#Distance - a floating point number indicated the distance between the two datapoints For points A and B, formula for the distance is:
-#The square root of ((XB - XA)2 + (YB - YA)2)
-#Note: you will have to import the sqrt function from the math library
-#MidPoint - calculates the midpoint between two datapoints.
-#Parameters:
-#Point A - a Point object with values
-#Point B - a Point ojbect with values
-#Returns:
-#Midpoint Datapoint - a Point object containing the midpoint values. For points A and B, formula for the midpoint is:
-#x value = (XB + XA) / 2
-#y value = (YB + YA) / 2
-#XAngle - calculates angle of the line between the two datapoints.
-#Parameters:
-#Point A - a Point object with values
-#Point B - a Point ojbect with values
-#Returns:
-#Angle - a floating point number indicating the angle of the line to the x axis in degrees. For points A and B, formula for the XAngle is:
-#slope = (YB - YA / (XB - XA)
-#XAngle = atan(slope) * 180 / pi
-#Note: you will have to import the atan function from the math library (arc tangent function)
 #Process each line of data in the 10.05 Points.txt file. As you read each line from Points.txt, you will create two Point objects. You can reuse these objects as you read the next datapoint.
 #The first two values are the (x,y) values for point A, and the second two values are the (x,y) values for point B.
 #Read each datapoint pair and disply the datapoint values, distancd, midpoint, and XAngle.
 from math import atan
 from math import pi
 from math import sqrt
+
 class Point:
-    def _init_(self, Xvalue, Yvalue):
+    def __init__(self, Xvalue, Yvalue):
         self.x = Xvalue 
         self.y = Yvalue
     def ToString(self):
-        return"(" + str(self.x) + ", "+ str(self.y)+")"
-    def Distance(pointA, pointB):
-        return sqrt(PointB.x - PointA.x)**2 + str(self.y) +")"
-    def MidPoint(pointA, pointB):
-        x = (pointB.x + pointA.x) / 2
-        y = (pointB.y + pointA.y) / 2
-        midpoint = Point(x,y)
-        return midpoint
-    def XAngle(pointA, pointB):
-        slope = (pointB.y - pointA.y) / (pointB.x + pointA.x)
-        return atan(slope) * 180.0 /pi
+        return "(" + str(self.x) + ", "+ str(self.y)+")"
+def Distance(pointA, pointB):
+    return sqrt((pointB.x - pointA.x)**2 + (pointB.y - pointA.y)**2)
+def MidPoint(pointA, pointB):
+    x = (pointB.x + pointA.x) / 2
+    y = (pointB.y + pointA.y) / 2
+    newmidpoint = Point(x,y)
+    return newmidpoint
+def XAngle(pointA, pointB):
+    slope = (pointB.y - pointA.y) / (pointB.x - pointA.x)
+    newXangle = atan(slope) * 180 / pi
+    return newXangle
 
-print("{:<20s} {:<20s} {:<20s} {:<20s}".format("Point A","Point B","Distance","Midpoint","Angle"))
-print("{:<20s} {:<20s} {:<20s} {:<20s}".format("-"*15,"-"*15,"-"*15,"-"*15,"-"*15))
+print("     {:<20s}{:<20s}{:<20s}{:<20s}{:<20s}".format("Point A","Point B","Distance","Midpoint","Angle"))
+print("{:>20s}{:>20s}{:>20s}{:>20s}{:>20s}".format("-"*15,"-"*15,"-"*15,"-"*15,"-"*15))
 
-pointfile = open()
-point =  
-while pointline != "":
-    pointvalues = line.split(",")
+textfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.05 Points.txt", 'r')
+line = textfile.readline()
 
+while line != "":
+    values = line.split(",")
+    pointA = Point(float(values[0].strip()),float(values[1].strip()))
+    pointB = Point(float(values[2].strip()),float(values[3].strip()))
+    print("{:>20s}{:>20s}{:>20.7f}{:>20s}{:>20.7f}".format(pointA.ToString(), pointB.ToString(), Distance(pointA,pointB), MidPoint(pointA,pointB).ToString(), XAngle(pointA,pointB)))
+    line = textfile.readline()
+
+textfile.close()
 
 #HW Output:
 #  Point A              Point B             Distance             Midpoint                Angle

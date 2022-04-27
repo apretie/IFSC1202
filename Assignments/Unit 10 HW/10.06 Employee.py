@@ -10,19 +10,36 @@
 #As you read each line from Payroll.txt, you will create one Employee object. You can reuse this object as you read the next employee.
 #Print the FirstName, LastName, IDNumber, HoursWorked, HourlyWage, and WeeklyPay for each employee
 class Employee:
-    def _init_(self,firstname,lastname,idnumber,hours,wage):
+    def __init__(self,firstname,lastname,idnumber,hoursworked,wage):
         self.FirstName = firstname
         self.LastName = lastname
         self.IDNumber = idnumber
-        self.HourlyWage = hours
-        self.Wage = wage
-    def WeeklyPay():
-        self.WeeklyPay = (self.)
+        self.HoursWorked = int(hoursworked)
+        self.Wage = float(wage)
+    def WeeklyPay(self):
+        if self.HoursWorked >= 40:
+             OT = (self.HoursWorked-40) * (1.5 * self.Wage)
+             RT = 40 * self.Wage
+        else:
+             OT = 0
+             RT = self.HoursWorked * self.Wage
+        return RT + OT
+
+textfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.06 Payroll.txt", 'r') 
+line = textfile.readline()
+
+print("{:>7} {:>7} {:>7} {:>7} {:>7} {:>7}".format("First","Last","ID","Hours","Hourly","Weekly"))
+print("{:>7} {:>7} {:>7} {:>7} {:>7} {:>7}".format("Name","Name","Number","Worked","Wage","Pay"))
+
+while line != "":
+   y = line.split(",")
+   emp1 = Employee(y[0].strip(),y[1].strip(),y[2].strip(),y[3].strip(),y[4].strip())
+   print("{:>7} {:>7} {:>7} {:7.2f} {:7.2f} {:7.2f}".format(emp1.FirstName,emp1.LastName,emp1.IDNumber,emp1.HoursWorked,emp1.Wage,emp1.WeeklyPay()))
+   line = textfile.readline()
+
+textfile.close()
 
 
-
-
-print("{:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format("First","Last","ID","Hours","Hourly","Weekly"))
 #HW Output:
 #First    Last      ID   Hours  Hourly  Weekly
     #Name    Name  Number  Worked    Wage     Pay

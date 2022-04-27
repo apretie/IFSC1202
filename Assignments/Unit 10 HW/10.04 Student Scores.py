@@ -24,15 +24,59 @@
     #Jim Evans has 3 scores - the second score is missing
     #Joe Smith has 4 scores
     #Jane Doe has 2 scores - the first score is missing
+
 class Student ():
-    def __init__(self, firstname, lastname, tnumber, scores):
-        self.FirstName = firstname
-        self.LastName = lastname
-        self.TNumber = tnumber
-        self.Scores = scores
-        
+     def __init__(self, firstname, lastname, tnumber, scores):
+          self.FirstName = firstname
+          self.LastName = lastname
+          self.Tnumber = tnumber
+          self.Scores = scores
+          self.Grades = []
+
+     def RunningAverage(self):
+          total = 0.0
+          count = 0
+          for i in range(len(self.Scores)):
+             if self.Scores[i].strip() != "":
+                total += float(self.Scores[i])
+                count += 1
+          return total / count
+
+     def TotalAverage(self):
+          total = 0.0
+          for i in range(len(self.Scores)):
+             if self.Scores[i].strip() != "":
+                total += float(self.Scores[i])
+          return total / len(self.Scores)
+
+     def LetterGrade(self):
+          tavg = self.TotalAverage()
+          if tavg >= 90:
+             return "A"
+          if tavg >= 80:
+             return "B"
+          if tavg >= 70:
+             return "C"
+          if tavg >= 60:
+             return "D"
+          else:
+             return "F"
 
 
+textfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.04 StudentScores.txt", 'r') 
+x = textfile.readline()
+
+print("{:>12} {:>12} {:>12} {:>12} {:>12} {:>12}".format("First","Last","ID","Running","Semester","Letter"))
+print("{:>12} {:>12} {:>12} {:>12} {:>12} {:>12}".format("Name","Name","Number","Average","Average","Grade"))
+print("{:>12} {:>12} {:>12} {:>12} {:>12} {:>12}".format("-"*12,"-"*12,"-"*12,"-"*12,"-"*12,"-"*12))
+
+while x != "":
+   y = x.split(",")
+   student1 = Student(y[0].strip(),y[1].strip(),y[2].strip(),y[3:])
+   print("{:>12} {:>12} {:>12} {:12.2f} {:12.2f} {:>12}".format(student1.FirstName,student1.LastName,student1.Tnumber,student1.RunningAverage(),student1.TotalAverage(),student1.LetterGrade()))
+   x = textfile.readline()
+
+textfile.close()
 
 
 #HW Output:

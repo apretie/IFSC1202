@@ -13,38 +13,42 @@
 #If the number is less that zero. call the Brake method to subtract that amount of speed from the car.
 #Print the change of speed value and the current speed value
 
+
 class Car ():
-    def __init__(self, Year, Make):
-        self.Year = Year
-        self.Make = Make
-        self.Speed = 0
+     def __init__(self, year, make):
+          self.Year = year
+          self.Make = make
+          self.Speed = 0
+     def Accelerate(self, change):
+          self.Speed += change
+          return self.Speed
+     def Brake(self, change):
+          self.Speed -= change
+          if self.Speed < 0:
+             self.Speed = 0
+          return self.Speed
 
-    def Accelerate(self, amount):
-        self.Speed += amount
-        return
+openfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.03 Cars.txt", 'r') 
+x = openfile.readline()
 
-    def Brake(self, amount):
-        self.Speed -+ amount
-        if self.Speed < 0:
-            self.Speed - 0
-        return
-
-def changespeed(amount):
-    if amount > 0:
-        ()
-    else:
-        car.Brake(abs(amount))
-    return
-
-carfile = open("/workspace/IFSC1202/Assignments/Unit 10 HW/10.03 Cars.txt", 'r')
-cars = carfile.readline()
-y = cars.split(",")
-car = Car(y[0], strip(), y[1].strip())
-
-print("Make: {}".format(car.Make))
-print("Year: {}".format(car.Year))
+y = x.split(",")
+car1 = Car(y[0].strip(),y[1].strip())
+print("Make: {}".format(car1.Make))
+print("Year: {}".format(car1.Year))
 print()
-print("Change Speed")
+print("Change    Speed")
+x = openfile.readline()
+
+while x != "":
+  change = int(x.strip())
+  if change > 0:
+    car1.Speed = car1.Accelerate(change)
+  else:
+    car1.Speed = car1.Brake(abs(change))
+  print("{:>6}{:>9}".format(change,car1.Speed))
+  x = openfile.readline()
+
+openfile.close()
 
 #HW Output:
 #Make: Jeep
